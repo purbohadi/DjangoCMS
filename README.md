@@ -1,2 +1,2 @@
-# DjangoCMSDemo
-DjangoCMSDemo
+# DjangoCMS
+DjangoCMS
