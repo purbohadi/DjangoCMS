@@ -1,0 +1,9 @@
+# Core CMS service
+django-cms
+
+# (not-so)Optional extras
+Pillow
+psycopg2
+
+# WSGI server
+gunicorn
