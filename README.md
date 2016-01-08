@@ -1,2 +1,2 @@
 # DjangoCMS
-DjangoCMS
+DjangoCMS initial files
