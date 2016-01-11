@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+USE_SOUTH = True
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
