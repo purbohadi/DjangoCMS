@@ -15,7 +15,7 @@ djangocms-admin-style==0.1.2
 django-treebeard
 
 # Optional, recommended packages
-Pillow==2.0.0
+Pillow==2.3.0
 django-filer==0.9.5
 cmsplugin-filer==0.9.5
 django-reversion==1.7
