@@ -95,11 +95,11 @@ WSGI_APPLICATION = 'DjangoCMSDemo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-	'PORT': '',
-        'HOST': '',
+        'NAME': 'djangocms',
+        'USER': 'djangocms',
+        'PASSWORD': 'b8m3bcId',
+	'PORT': '3306',
+        'HOST': 'localhost',
     }
 }
 
