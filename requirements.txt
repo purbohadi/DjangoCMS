@@ -12,6 +12,7 @@ django-mptt==0.6
 django-sekizai==0.7
 six==1.3.0
 djangocms-admin-style==0.1.2
+django-treebeard
 
 # Optional, recommended packages
 Pillow==2.0.0
