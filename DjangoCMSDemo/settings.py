@@ -44,11 +44,11 @@ INSTALLED_APPS = (
     'menus',  # helper for model independent hierarchical website navigation
     'sekizai',  # for javascript and css management
     'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list **before** 'django.contrib.admin'.
-#    'django.contrib.admin',
+    'django.contrib.admin',
     'mptt',
     'media_tree',
-    'south'
-    'appmedia'	
+    'south',
+    'appmedia',
 )
 
 # List of callables that know how to import templates from various sources.
@@ -153,7 +153,7 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
-MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 ADMIN_MEDIA_PREFIX="/media/admin/"
 
