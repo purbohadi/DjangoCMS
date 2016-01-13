@@ -14,6 +14,7 @@ six==1.9.0
 djangocms-admin-style==0.1.2
 django-treebeard
 django-media-tree
+django-appmedia
 
 # Optional, recommended packages
 Pillow==2.3.0
