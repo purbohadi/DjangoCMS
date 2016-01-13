@@ -48,8 +48,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'mptt',
     'south',
-    'appmedia',
-    'media_tree.contrib.cms_plugins'
+#    'appmedia',
+#    'media_tree.contrib.cms_plugins'
 )
 
 # List of callables that know how to import templates from various sources.
