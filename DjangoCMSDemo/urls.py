@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url, static
 from django.contrib import admin
 from django.conf import settings
 
@@ -21,4 +21,4 @@ urlpatterns = patterns('',
 #    ) + urlpatterns
 
 if settings.DEBUG: 
-    urlpatterns += (r'^media/(?P.*)$', 'site.media.serve_apps', {'document_root' : settings.MEDIA_ROOT})
+    urlpatterns += (settings.STATIC_URL, document_root=settings.STATIC_ROOT)
