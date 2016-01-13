@@ -47,9 +47,9 @@ INSTALLED_APPS = (
     'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list **before** 'django.contrib.admin'.
     'django.contrib.admin',
     'mptt',
-    'media_tree',
     'south',
     'appmedia',
+    'media_tree.contrib.cms_plugins'
 )
 
 # List of callables that know how to import templates from various sources.
