@@ -11,6 +11,7 @@ from __future__ import absolute_import, unicode_literals
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+gettext  lambda s: s
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -40,14 +41,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'cms',  # django CMS itself
-	'treebeard',  # utilities for implementing a tree
-	'menus',  # helper for model independent hierarchical website navigation
-	'sekizai',  # for javascript and css management
-	'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list **before** 'django.contrib.admin'.
-	'django.contrib.admin',
-	'mptt',
-	'media_tree',
-	'south'
+    'treebeard',  # utilities for implementing a tree
+    'menus',  # helper for model independent hierarchical website navigation
+    'sekizai',  # for javascript and css management
+    'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list **before** 'django.contrib.admin'.
+#    'django.contrib.admin',
+    'mptt',
+    'media_tree',
+    'south'
+    'appmedia'	
 )
 
 # List of callables that know how to import templates from various sources.
@@ -58,7 +60,7 @@ TEMPLATE_LOADERS = (
 
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-	'django.contrib.auth.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
@@ -80,6 +82,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    'cms.middleware.media.PlaceholderMediaMiddleware'
 )
 
 SITE_ID = 1
@@ -125,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 # Full filesystem path to the project.
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Name of the directory for the project.
@@ -150,3 +154,17 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
+MEDIA_URL = "/media/"
+ADMIN_MEDIA_PREFIX="/media/admin/"
+
+TEMPLATE_DIRS = (
+    # The docs say it should be absolute path: PROJECT_PATH is precisely one.
+    # Life is wonderful!
+    os.path.join(PROJECT_PATH, "templates")
+)
+
+CMS_TEMPLATES = (
+    ('template_1.html', 'Template One'),
+    ('template_2.html', 'Template Two'),
+)
