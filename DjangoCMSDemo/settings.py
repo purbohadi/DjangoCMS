@@ -82,7 +82,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    'cms.middleware.media.PlaceholderMediaMiddleware'
+#    'cms.middleware.media.PlaceholderMediaMiddleware'
 )
 
 SITE_ID = 1
